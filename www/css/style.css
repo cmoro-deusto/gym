@@ -1,0 +1,35 @@
+/* Empty. Add your own CSS if you like */
+.video-modal.modal-colors ion-header-bar, .video-modal.modal-colors .bar, .video-modal.modal-colors{
+    border-bottom: none;
+    background-color: black;
+    background-image: none;
+}
+.video-modal .scroll{
+    height: 100%;
+}
+#videoplayer{
+    height: 100%;
+    width: 100%;
+    margin: auto auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.platform-android #videoplayer{
+    min-height:80%;
+}
+#videoplayer video{
+    margin: auto auto;
+    vertical-align: middle;
+    width: 100%;
+}
+.platform-ios #videoplayer video{
+    min-height: 80%
+}
+#videoplayer #video2{
+    margin: auto 0px;
+    vertical-align: middle;
+    width: 100%;
+}

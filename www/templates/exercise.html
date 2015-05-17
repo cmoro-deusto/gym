@@ -1,0 +1,40 @@
+<ion-view view-title="{{exercise.name}}">
+  <ion-content>
+    <div class="list card">
+
+      <div class="item item-avatar">
+        <img src="img/{{exercise.icon}}">
+        <h2>{{exercise.name}}</h2>
+        <p>Descripcion</p>
+      </div>
+
+      <div class="item item-image" ng-click="openVideoModal($scope.exercise)">
+        <img src="img/{{exercise.image}}">
+      </div>
+
+      <a class="item item-icon-left" ng-click="openVideoModal($scope.exercise)" >
+        <i class="icon ion-videocamera"></i>
+        Ver Ejercicio
+      </a>
+
+    </div>
+  </ion-content>
+</ion-view>
+
+<script id="show-video.html" type="text/ng-template">
+  <div class="modal video-modal modal-colors">
+    <ion-header-bar class="bar bar-header bar-positive">
+      <button class="button button-clear button-primary left-button icon ion-android-close" ng-click="cancelVideoModal()"></button>
+    </ion-header-bar>
+    <ion-content has-bouncing="false">
+      <h3 style="text-align:center;color:white">{{(exercise.name)}}</h3>
+      <div id='videoplayer' style="background-color:black">
+        <!--<video ng-src="{{exercise.video}}" controls="" autoplay="" loop="" muted="" preload="" ng-if="showVideo && !androidPlatform">-->
+        </video>
+        <video ng-src="{{exercise.video}}" id="videoplayerscreen" controls="" autoplay="" loop="" muted="" preload="" ng-if="showVideo">
+        </video>
+      </div>
+    </ion-content>
+  </div>
+</script>
+
